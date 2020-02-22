@@ -16,8 +16,16 @@ a {
   }
 }
 
+.width-full {
+  width: 100%;
+}
+
 .display-hidden {
   display: none;
+}
+
+.display-flex {
+  display: flex;
 }
 
 .sa_takeHint {
@@ -40,6 +48,14 @@ a {
       color: #33aacc;
     }
   }
+}
+
+button.primary {
+    margin: auto;
+  display: block;
+  margin-top: 25px;
+  border-radius: 100px;
+  
 }
 
 .tooltip {
@@ -302,6 +318,21 @@ code {
       margin-top: 15px;
     }
   }
+  .sa_ticket_form {
+    padding: 45px;
+    margin: 25px;
+    border: 1px solid #949494;
+    border-radius: 10px;
+    textarea {
+      width: 100%;
+      margin-top: 35px;
+      border-radius: 10px;
+      padding: 10px;
+      height: 200px;
+  
+    }
+
+  }
   h3 {
     font-size: 22px;
     font-weight: 500;
@@ -343,6 +374,19 @@ code {
       color: $midnight;
       background: white;
       transition: all .35s;
+      a {
+        color: #8c8c8c;
+        width: 100%;
+        span {
+          width: 100%;
+          &.name {
+            text-align: right;
+          }
+          &.date {
+            margin-top: 15px;
+          }
+        }
+      }
     }
     &-close {
       display: flex;
@@ -367,7 +411,7 @@ code {
     }
     ~ .tab-content {
       max-height: 100vh;
-      padding: 1em;
+      padding: 0;
     }
   }
 }
