@@ -21,7 +21,7 @@ class Home extends Component{
             <h1>Ticket</h1>
             <hr/>
             <Grid container spacing={3}>
-              <Grid item md={4}>
+              <Grid item xs={12} sm={5} md={4}>
                 <Paper>
                   <div className="sa_tickets">
                     <h3>My Tickets</h3>
@@ -87,16 +87,16 @@ class Home extends Component{
                   </div>
                 </Paper>
               </Grid>
-              <Grid item md={8}>
+              <Grid item xs={12} sm={7} md={8}>
                 <Paper>
                   <div className="sa_ticket_editor">
                     <h3 style={{ 'marginBottom': '40px', 'marginLeft': '23px' }}>Ticket submission form</h3>
                     <form className="sa_ticket_form" noValidate autoComplete="on">
                       <Grid container spacing={3}>
-                        <Grid item md={6}>
+                        <Grid item xs={12} md={6}>
                           <TextField className="width-full" id="standard-basic" label="First & Last name" />
                         </Grid>
-                        <Grid item md={6}>
+                        <Grid item xs={12} md={6}>
                         <InputLabel className='width-full' id="demo-simple-select-label">Priority</InputLabel>
                           <Select
                             labelId="demo-simple-select-label"
@@ -110,10 +110,10 @@ class Home extends Component{
                         </Grid>
                       </Grid>
                       <Grid container spacing={3} style={{ 'marginTop': '40px' }}>
-                        <Grid item md={6}>
+                        <Grid item xs={12} md={6}>
                           <TextField className="width-full" id="standard-basic" label="Topic" />
                         </Grid>
-                        <Grid item md={6}>
+                        <Grid item xs={12} md={6}>
                         <InputLabel className='width-full' id="demo-simple-select-label">Part</InputLabel>
                           <Select
                             labelId="demo-simple-select-label"

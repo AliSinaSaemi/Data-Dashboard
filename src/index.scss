@@ -428,3 +428,10 @@ code {
     font-size: 8px;
 }
 }
+
+@media(max-width: 900px) {
+  .sa_ticket_section .sa_ticket_form {
+    padding: 10px;
+    margin: 0;
+  }
+}
