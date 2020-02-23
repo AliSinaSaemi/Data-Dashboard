@@ -417,6 +417,62 @@ code {
 }
 
 
+.sa_todo_list {
+  padding: 50px;
+  .sa_reply {
+    text-transform: inherit;
+    width: 100%;
+    position: relative;
+    .MuiButton-label {
+      margin-right: auto;
+      width: 70px;
+      
+    }
+    .fas {
+      position: absolute;
+      right: 25px;
+    }
+  }
+  .sa_todo_item {
+    margin: 20px 0;
+    img {
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      margin-right: 20px;
+    }
+    .header {
+      padding: 10px;
+      background-color: #efefef;
+      border-top-right-radius: 8px;
+      border-top-left-radius: 8px;
+      span {
+        margin-left: auto;
+        &.date {
+          position: relative;
+          top: 5px;
+        }
+      }
+      h3 {
+        font-size: 20px;
+      }
+      h4 {
+        margin: 0;
+      }
+    }
+    .body {
+      p {
+        margin: 0;
+        line-height: 25px;
+        text-align: justify;
+      }
+      padding: 15px;
+      border: 1px solid #efefef;
+      border-bottom-right-radius: 8px;
+      border-bottom-left-radius: 8px;
+    }
+  }
+}
 
 
 // Responsive
