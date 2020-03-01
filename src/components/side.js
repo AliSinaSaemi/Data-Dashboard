@@ -21,7 +21,7 @@ import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import InboxIcon from "@material-ui/icons/MoveToInbox";
-import { BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Badge from "@material-ui/core/Badge";
 import Link from "@material-ui/core/Link";
 import Grid from "@material-ui/core/Grid";
@@ -324,12 +324,14 @@ export default function PersistentDrawerRight() {
       >
         <div className={classes.drawerHeader} />
         <BrowserRouter>
-          <Route exact path="/home" component={Home} />
-          <Route path="/movie" component={Movie} />
-          <Route path="/text" component={Editor} />
-          <Route path="/videos" component={VideoList} />
-          <Route path="/videoplayer" component={VideoPlayer} />
-          <Route path="/:video_id" component={Video} />
+          <Switch>
+            <Route exact path="/home" component={Home} />
+            <Route path="/movie" component={Movie} />
+            <Route path="/text" component={Editor} />
+            <Route path="/videos" component={VideoList} />
+            <Route path="/videoplayer" component={VideoPlayer} />
+            <Route path="/:video_id" component={Video} />
+          </Switch>
         </BrowserRouter>
       </main>
       <Drawer
@@ -352,16 +354,18 @@ export default function PersistentDrawerRight() {
         </div>
         <Divider />
         <List>
-          {["Home", "Text", "Movie", "Videos", "Videoplayer"].map((text, index) => (
-            <Link href={text}>
-              <ListItem button key={text}>
-                <ListItemIcon>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                </ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItem>
-            </Link>
-          ))}
+          {["Home", "Text", "Movie", "Videos", "Videoplayer"].map(
+            (text, index) => (
+              <Link href={text}>
+                <ListItem button key={text}>
+                  <ListItemIcon>
+                    {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                  </ListItemIcon>
+                  <ListItemText primary={text} />
+                </ListItem>
+              </Link>
+            )
+          )}
         </List>
       </Drawer>
     </div>

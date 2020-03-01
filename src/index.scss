@@ -2,7 +2,7 @@ $textEditor_info_color: #3d4251;
 $midnight: #2c3e50;
 $clouds: #ecf0f1;
 
-// Heading Font sizes 
+// Heading Font sizes
 $heading_large: 23px;
 $heading_medium: 17px;
 $heading_small: 12px;
@@ -40,7 +40,7 @@ a {
     margin: 0;
     margin-left: 15px;
     color: $textEditor_info_color;
-    transition: .3s;
+    transition: 0.3s;
     font-weight: bold;
   }
   &:hover {
@@ -51,11 +51,10 @@ a {
 }
 
 button.primary {
-    margin: auto;
+  margin: auto;
   display: block;
   margin-top: 25px;
   border-radius: 100px;
-  
 }
 
 .tooltip {
@@ -96,9 +95,9 @@ button.primary {
 
 .player-wrapper {
   position: relative;
-  padding-top: 56.25% /* Player ratio: 100 / (1280 / 720) */
+  padding-top: 56.25%; /* Player ratio: 100 / (1280 / 720) */
 }
- 
+
 .react-player {
   position: absolute;
   top: 0;
@@ -133,7 +132,7 @@ code {
   text-align: right;
   .sa_textEditor_redo,
   .sa_textEditor_runCode,
-  input[type='submit'] {
+  input[type="submit"] {
     margin-left: 9px;
     background-color: #36d57d;
     padding: 8px 17px;
@@ -158,8 +157,24 @@ code {
 .sa_terminal_section {
   margin-top: 65px;
 }
-
-
+.sa_video_gallary {
+  .sa_cover {
+    overflow: hidden;
+    img {
+      margin: auto;
+      display: block;
+      transform: scale(1.5);
+      transition: 0.4s;
+    }
+  }
+  .MuiGrid-item:hover {
+    .sa_cover {
+      img {
+        transform: scale(1.8);
+      }
+    }
+  }
+}
 
 .sa_textEditor_info {
   width: 100%;
@@ -188,7 +203,6 @@ code {
       padding: 4px 8px;
       text-transform: uppercase;
       font-weight: bold;
-
     }
   }
   .content {
@@ -213,10 +227,10 @@ code {
         position: relative;
         .fas {
           font-size: 8px;
-    left: -19px;
-    top: 6px;
-    position: absolute;
-    color: #3ac;
+          left: -19px;
+          top: 6px;
+          position: absolute;
+          color: #3ac;
         }
       }
     }
@@ -224,7 +238,6 @@ code {
       margin-top: 0;
       font-size: $heading_large;
     }
-
   }
 }
 
@@ -232,7 +245,7 @@ code {
   .MuiBox-root-264 {
     padding: 0 !important;
   }
-  
+
   .MuiTab-wrapper {
     text-transform: lowercase;
   }
@@ -248,7 +261,7 @@ code {
   }
   .MuiBox-root {
     padding: 0;
-  } 
+  }
   span.MuiTab-wrapper {
     font-size: 12px;
     font-weight: 600;
@@ -264,7 +277,7 @@ code {
   }
   .MuiAppBar-colorPrimary {
     background-color: #cfdce1;
-}
+  }
 }
 
 .editor {
@@ -340,9 +353,7 @@ code {
       border-radius: 10px;
       padding: 10px;
       height: 200px;
-  
     }
-
   }
   h3 {
     font-size: 22px;
@@ -353,7 +364,7 @@ code {
   .tabs {
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 4px 4px -2px rgba(0,0,0,0.5);
+    box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.5);
     margin-top: 30px;
   }
   .tab {
@@ -376,7 +387,7 @@ code {
         width: 1em;
         height: 1em;
         text-align: center;
-        transition: all .35s;
+        transition: all 0.35s;
       }
     }
     &-content {
@@ -384,7 +395,7 @@ code {
       padding: 0 1em;
       color: $midnight;
       background: white;
-      transition: all .35s;
+      transition: all 0.35s;
       a {
         color: #8c8c8c;
         width: 100%;
@@ -411,7 +422,7 @@ code {
       }
     }
   }
-  
+
   // :checked
   input:checked {
     + .tab-label {
@@ -427,7 +438,6 @@ code {
   }
 }
 
-
 .sa_todo_list {
   padding: 50px;
   .sa_reply {
@@ -437,7 +447,6 @@ code {
     .MuiButton-label {
       margin-right: auto;
       width: 70px;
-      
     }
     .fas {
       position: absolute;
@@ -485,18 +494,18 @@ code {
   }
 }
 
-
 // Responsive
 
-
-@media(max-width: 500px) {
-  .sa_textEditor_options .sa_textEditor_redo, .sa_textEditor_options .sa_textEditor_runCode, .sa_textEditor_options input[type='submit'] {
+@media (max-width: 500px) {
+  .sa_textEditor_options .sa_textEditor_redo,
+  .sa_textEditor_options .sa_textEditor_runCode,
+  .sa_textEditor_options input[type="submit"] {
     padding: 5px 9px;
     font-size: 8px;
-}
+  }
 }
 
-@media(max-width: 900px) {
+@media (max-width: 900px) {
   .sa_ticket_section .sa_ticket_form {
     padding: 10px;
     margin: 0;
