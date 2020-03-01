@@ -4,6 +4,7 @@ import Typography from "@material-ui/core/Typography";
 import CardContent from "@material-ui/core/CardContent";
 import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
+import { Link } from "react-router-dom";
 class VideoList extends Component {
   state = {
     videos: [
@@ -45,16 +46,18 @@ class VideoList extends Component {
     const { videos } = this.state;
     const tutorials = videos.map(video => {
       return (
-        <Grid item md={4}>
-          <Card key={video.id}>
+        <Grid item md={4} key={video.id}>
+          <Card>
             <CardActionArea>
               <div className="sa_cover">
                 <img src={video.cover} alt={video.title} />
               </div>
               <CardContent>
-                <Typography gutterBottom variant="h5" component="h2">
-                  {video.title}
-                </Typography>
+                <Link to={'/' + video.id}>
+                  <Typography gutterBottom variant="h5" component="h2">
+                    {video.title}
+                  </Typography>
+                </Link>
                 <Typography variant="body2" color="textSecondary" component="p">
                   {video.detials}
                 </Typography>

@@ -3,6 +3,8 @@ import clsx from "clsx";
 import Editor from "./editor";
 import Movie from "./movie";
 import Home from "./home";
+import Video from "./video";
+import VideoPlayer from './VideoPlayer';
 import VideoList from "./videoList";
 import { useTheme } from "@material-ui/core/styles";
 import Drawer from "@material-ui/core/Drawer";
@@ -30,6 +32,7 @@ import AccountCircle from "@material-ui/icons/AccountCircle";
 import MailIcon from "@material-ui/icons/Mail";
 import NotificationsIcon from "@material-ui/icons/Notifications";
 import MoreIcon from "@material-ui/icons/MoreVert";
+
 const drawerWidth = 240;
 
 const useStyles = makeStyles(theme => ({
@@ -325,6 +328,8 @@ export default function PersistentDrawerRight() {
           <Route path="/movie" component={Movie} />
           <Route path="/text" component={Editor} />
           <Route path="/videos" component={VideoList} />
+          <Route path="/videoplayer" component={VideoPlayer} />
+          <Route path="/:video_id" component={Video} />
         </BrowserRouter>
       </main>
       <Drawer
@@ -347,7 +352,7 @@ export default function PersistentDrawerRight() {
         </div>
         <Divider />
         <List>
-          {["Home", "Text", "Movie", "Videos"].map((text, index) => (
+          {["Home", "Text", "Movie", "Videos", "Videoplayer"].map((text, index) => (
             <Link href={text}>
               <ListItem button key={text}>
                 <ListItemIcon>
