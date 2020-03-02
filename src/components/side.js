@@ -4,6 +4,7 @@ import Editor from "./editor";
 import Movie from "./movie";
 import Home from "./home";
 import Video from "./video";
+import Login from "./Login"
 import VideoPlayer from './VideoPlayer';
 import VideoList from "./videoList";
 import { useTheme } from "@material-ui/core/styles";
@@ -330,6 +331,7 @@ export default function PersistentDrawerRight() {
             <Route path="/text" component={Editor} />
             <Route path="/videos" component={VideoList} />
             <Route path="/videoplayer" component={VideoPlayer} />
+            <Route path="/login" component={Login} />
             <Route path="/:video_id" component={Video} />
           </Switch>
         </BrowserRouter>
@@ -354,7 +356,7 @@ export default function PersistentDrawerRight() {
         </div>
         <Divider />
         <List>
-          {["Home", "Text", "Movie", "Videos", "Videoplayer"].map(
+          {["Home", "Text", "Movie", "Videos", "Videoplayer", "Login"].map(
             (text, index) => (
               <Link href={text}>
                 <ListItem button key={text}>
